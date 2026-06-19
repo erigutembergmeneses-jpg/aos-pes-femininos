@@ -1,389 +1,389 @@
 /* Reset e Configurações Globais */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Cormorant Garamond', serif;
-  background-color: #f8f5f0;
-  color: #2c2c2c;
-  line-height: 1.6;
+    font-family: 'Cormorant Garamond', serif;
+    background-color: #f8f5f0;
+    color: #2c2c2c;
+    line-height: 1.6;
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 /* Tipografia */
 h1, h2, h3, h4 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  color: #1a1a1a;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #1a1a1a;
 }
 
 h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  letter-spacing: -0.5px;
-  border-bottom: 2px solid #d4c5b2;
-  display: inline-block;
-  padding-bottom: 0.3rem;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.5px;
+    border-bottom: 2px solid #d4c5b2;
+    display: inline-block;
+    padding-bottom: 0.3rem;
 }
 
-/* Cabeçalho Hero - CORRIGIDO */
+/* Cabeçalho Hero */
 .hero {
-  height: 100vh;
-  min-height: 600px;
-  background-image: url('capa-aos-pes-femininos.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
+    height: 100vh;
+    min-height: 600px;
+    background-image: url('capa-aos-pes-femininos.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
 }
 
 /* Fallback caso a imagem não carregue */
 .hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.3);
-  z-index: 0;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #2c1810 0%, #4a2c1f 100%);
+    z-index: 0;
 }
 
 .hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.55);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
 }
 
 .hero-content {
-  max-width: 800px;
-  padding: 20px;
-  animation: fadeIn 1.5s ease-out;
-  position: relative;
-  z-index: 2;
+    max-width: 800px;
+    padding: 20px;
+    animation: fadeIn 1.5s ease-out;
+    position: relative;
+    z-index: 2;
 }
 
 .hero-subtitle {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.4rem;
-  font-weight: 300;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-  opacity: 0.9;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    opacity: 0.9;
 }
 
 .hero-title {
-  font-size: 5.5rem;
-  line-height: 1.1;
-  margin-bottom: 0.5rem;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+    font-size: 5.5rem;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
 }
 
 .hero-title .highlight {
-  color: #e8c9a0;
-  font-style: italic;
-  display: inline-block;
+    color: #e8c9a0;
+    font-style: italic;
+    display: inline-block;
 }
 
 .hero-author {
-  font-size: 1.8rem;
-  font-weight: 300;
-  letter-spacing: 4px;
-  margin-top: 0.5rem;
-  font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 300;
+    letter-spacing: 4px;
+    margin-top: 0.5rem;
+    font-family: 'Cormorant Garamond', serif;
 }
 
 .hero-detail {
-  font-size: 1.2rem;
-  font-weight: 300;
-  letter-spacing: 6px;
-  opacity: 0.8;
-  margin-top: 0.2rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 6px;
+    opacity: 0.8;
+    margin-top: 0.2rem;
 }
 
 .hero-quote {
-  margin-top: 2.5rem;
-  padding: 1.5rem;
-  border-top: 1px solid rgba(255,255,255,0.3);
-  border-bottom: 1px solid rgba(255,255,255,0.3);
-  font-style: italic;
-  font-size: 1.1rem;
-  opacity: 0.9;
+    margin-top: 2.5rem;
+    padding: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    font-style: italic;
+    font-size: 1.1rem;
+    opacity: 0.9;
 }
 
 .hero-quote i {
-  margin-right: 10px;
-  opacity: 0.6;
+    margin-right: 10px;
+    opacity: 0.6;
 }
 
 /* Animações */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* Seção Projeto */
 .project-section {
-  padding: 5rem 0 3rem 0;
-  background: #fff;
+    padding: 5rem 0 3rem 0;
+    background: #fff;
 }
 
 .project-section p {
-  font-size: 1.2rem;
-  max-width: 800px;
-  margin-bottom: 2rem;
-  color: #3d3d3d;
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin-bottom: 2rem;
+    color: #3d3d3d;
 }
 
 .project-features {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1rem;
 }
 
 .project-features span {
-  background: #f0ebe5;
-  padding: 0.7rem 1.5rem;
-  border-radius: 50px;
-  font-size: 1rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
+    background: #f0ebe5;
+    padding: 0.7rem 1.5rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .project-features i {
-  color: #a68b7b;
-  font-size: 1.1rem;
+    color: #a68b7b;
+    font-size: 1.1rem;
 }
 
 /* Seção de Faixas */
 .tracks-section {
-  padding: 4rem 0;
-  background: #faf8f5;
+    padding: 4rem 0;
+    background: #faf8f5;
 }
 
 .tracks-intro {
-  font-size: 1.1rem;
-  color: #555;
-  margin-bottom: 2.5rem;
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2.5rem;
 }
 
 .tracks-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-  gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 2rem;
 }
 
 .track-card {
-  background: #fff;
-  padding: 1.8rem 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  border-left: 4px solid #d4c5b2;
+    background: #fff;
+    padding: 1.8rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-left: 4px solid #d4c5b2;
 }
 
 .track-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }
 
 .track-number {
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #a68b7b;
-  font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #a68b7b;
+    font-weight: 600;
 }
 
 .track-title {
-  font-size: 1.6rem;
-  font-weight: 600;
-  margin: 0.3rem 0 0.2rem 0;
-  cursor: pointer;
-  transition: color 0.2s;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: 0.3rem 0 0.2rem 0;
+    cursor: pointer;
+    transition: color 0.2s;
 }
 
 .track-title:hover {
-  color: #a68b7b;
+    color: #a68b7b;
 }
 
 .track-detail {
-  font-weight: 500;
-  color: #555;
-  font-size: 1rem;
-  margin-bottom: 0.3rem;
+    font-weight: 500;
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
 }
 
 .track-description {
-  font-size: 0.95rem;
-  color: #666;
-  margin-bottom: 1rem;
-  line-height: 1.5;
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.5;
 }
 
 .track-player {
-  margin-top: 0.8rem;
+    margin-top: 0.8rem;
 }
 
 .track-player audio {
-  width: 100%;
-  height: 40px;
-  border-radius: 8px;
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
 }
 
 .player-label {
-  font-size: 0.8rem;
-  text-align: right;
-  color: #888;
-  margin-top: 0.3rem;
-  font-style: italic;
+    font-size: 0.8rem;
+    text-align: right;
+    color: #888;
+    margin-top: 0.3rem;
+    font-style: italic;
 }
 
 /* Seção Internet Archive */
 .archive-section {
-  padding: 4rem 0;
-  background: #eae3db;
+    padding: 4rem 0;
+    background: #eae3db;
 }
 
 .archive-card {
-  background: #fff;
-  padding: 2.5rem;
-  border-radius: 16px;
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 16px;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .archive-icon {
-  font-size: 3rem;
-  color: #a68b7b;
-  margin-bottom: 0.5rem;
+    font-size: 3rem;
+    color: #a68b7b;
+    margin-bottom: 0.5rem;
 }
 
 .archive-card h2 {
-  border-bottom: none;
-  margin-bottom: 0.5rem;
+    border-bottom: none;
+    margin-bottom: 0.5rem;
 }
 
 .archive-card a {
-  display: inline-block;
-  background: #2c2c2c;
-  color: #fff;
-  padding: 0.8rem 2rem;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 500;
-  margin: 0.8rem 0 1rem 0;
-  transition: background 0.2s;
+    display: inline-block;
+    background: #2c2c2c;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0.8rem 0 1rem 0;
+    transition: background 0.2s;
 }
 
 .archive-card a:hover {
-  background: #1a1a1a;
+    background: #1a1a1a;
 }
 
 /* Rodapé */
 .footer {
-  background: #1a1a1a;
-  color: #ccc;
-  padding: 3rem 0;
-  text-align: center;
+    background: #1a1a1a;
+    color: #ccc;
+    padding: 3rem 0;
+    text-align: center;
 }
 
 .footer h3 {
-  color: #fff;
-  font-weight: 400;
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .footer p {
-  max-width: 600px;
-  margin: 0 auto 0.5rem auto;
+    max-width: 600px;
+    margin: 0 auto 0.5rem auto;
 }
 
 .footer .license {
-  margin-top: 1.5rem;
-  font-size: 0.9rem;
-  opacity: 0.7;
-  border-top: 1px solid #333;
-  padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    border-top: 1px solid #333;
+    padding-top: 1.5rem;
 }
 
 .footer i {
-  margin: 0 3px;
+    margin: 0 3px;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-  .hero-title {
-    font-size: 3.8rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1rem;
-  }
-
-  .hero-author {
-    font-size: 1.4rem;
-  }
-
-  h2 {
-    font-size: 2rem;
-  }
-
-  .tracks-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .project-features {
-    flex-direction: column;
-    gap: 0.8rem;
-  }
-
-  .project-features span {
-    justify-content: center;
-  }
+    .hero-title {
+        font-size: 3.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero-author {
+        font-size: 1.4rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .tracks-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-features {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    
+    .project-features span {
+        justify-content: center;
+    }
 }
 
 @media (max-width: 480px) {
-  .hero-title {
-    font-size: 2.8rem;
-  }
-
-  .hero {
-    background-attachment: scroll;
-  }
-
-  .hero-quote {
-    font-size: 0.95rem;
-    padding: 1rem;
-  }
-
-  .track-card {
-    padding: 1.2rem;
-  }
+    .hero-title {
+        font-size: 2.8rem;
+    }
+    
+    .hero {
+        background-attachment: scroll;
+    }
+    
+    .hero-quote {
+        font-size: 0.95rem;
+        padding: 1rem;
+    }
+    
+    .track-card {
+        padding: 1.2rem;
+    }
 }
