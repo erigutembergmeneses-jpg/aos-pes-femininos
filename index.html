@@ -3,498 +3,281 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aos Pés Femininos</title>
-    
-    <!-- Meta Tags -->
-    <meta name="description" content="Aos Pés Femininos: 12 versões musicadas de um soneto em 12 idiomas">
+    <meta name="description" content="Aos Pés Femininos - Livro-álbum com 12 versões musicadas de um soneto em 12 idiomas, cantadas com inteligência artificial.">
+    <meta name="keywords" content="poesia, música, inteligência artificial, soneto, livro-álbum, Creative Commons">
+    <meta name="author" content="Erigutemberg Meneses">
     <meta property="og:title" content="Aos Pés Femininos">
-    <meta property="og:description" content="12 idiomas · 12 melodias · um soneto que atravessa fronteiras">
+    <meta property="og:description" content="12 versões musicadas de um soneto em 12 idiomas">
     <meta property="og:image" content="capa-aos-pes-femininos.jpg">
+    <title>Aos Pés Femininos | Erigutemberg Meneses</title>
     
-    <!-- Fontes -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <style>
-        /* ===== ESTILOS COMPLETOS ===== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Cormorant Garamond', serif;
-            background-color: #f8f5f0;
-            color: #2c2c2c;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            border-bottom: 2px solid #d4c5b2;
-            display: inline-block;
-            padding-bottom: 0.3rem;
-        }
-
-        /* HERO */
-        .hero {
-            height: 100vh;
-            min-height: 600px;
-            background-image: url('capa-aos-pes-femininos.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: #fff;
-        }
-
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.55);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .hero-content {
-            max-width: 800px;
-            padding: 20px;
-            animation: fadeIn 1.5s ease-out;
-            position: relative;
-            z-index: 1;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .hero-subtitle {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.4rem;
-            font-weight: 300;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 1rem;
-            opacity: 0.9;
-        }
-
-        .hero-title {
-            font-size: 5.5rem;
-            line-height: 1.1;
-            margin-bottom: 0.5rem;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
-        }
-
-        .hero-title .highlight {
-            color: #e8c9a0;
-            font-style: italic;
-        }
-
-        .hero-author {
-            font-size: 1.8rem;
-            font-weight: 300;
-            letter-spacing: 4px;
-            font-family: 'Cormorant Garamond', serif;
-        }
-
-        .hero-detail {
-            font-size: 1.2rem;
-            font-weight: 300;
-            letter-spacing: 6px;
-            opacity: 0.8;
-        }
-
-        .hero-quote {
-            margin-top: 2.5rem;
-            padding: 1.5rem;
-            border-top: 1px solid rgba(255,255,255,0.3);
-            border-bottom: 1px solid rgba(255,255,255,0.3);
-            font-style: italic;
-            font-size: 1.1rem;
-        }
-
-        .hero-quote i {
-            margin-right: 10px;
-            opacity: 0.6;
-        }
-
-        /* PROJETO */
-        .project-section {
-            padding: 5rem 0 3rem;
-            background: #fff;
-        }
-
-        .project-section p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin-bottom: 2rem;
-        }
-
-        .project-features {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-        }
-
-        .project-features span {
-            background: #f0ebe5;
-            padding: 0.7rem 1.5rem;
-            border-radius: 50px;
-            font-size: 1rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .project-features i {
-            color: #a68b7b;
-        }
-
-        /* TRACKS */
-        .tracks-section {
-            padding: 4rem 0;
-            background: #faf8f5;
-        }
-
-        .tracks-intro {
-            font-size: 1.1rem;
-            color: #555;
-            margin-bottom: 2.5rem;
-        }
-
-        .tracks-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-            gap: 2rem;
-        }
-
-        .track-card {
-            background: #fff;
-            padding: 1.8rem 1.5rem;
-            border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.04);
-            transition: transform 0.2s, box-shadow 0.2s;
-            border-left: 4px solid #d4c5b2;
-        }
-
-        .track-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-        }
-
-        .track-number {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #a68b7b;
-            font-weight: 600;
-        }
-
-        .track-title {
-            font-size: 1.6rem;
-            font-weight: 600;
-            margin: 0.3rem 0;
-            cursor: pointer;
-            transition: color 0.2s;
-        }
-
-        .track-title:hover {
-            color: #a68b7b;
-        }
-
-        .track-detail {
-            font-weight: 500;
-            color: #555;
-        }
-
-        .track-description {
-            font-size: 0.95rem;
-            color: #666;
-            margin: 0.5rem 0 1rem;
-        }
-
-        .track-player audio {
-            width: 100%;
-            height: 40px;
-            border-radius: 8px;
-        }
-
-        .player-label {
-            font-size: 0.8rem;
-            text-align: right;
-            color: #888;
-            margin-top: 0.3rem;
-            font-style: italic;
-        }
-
-        /* ARCHIVE */
-        .archive-section {
-            padding: 4rem 0;
-            background: #eae3db;
-        }
-
-        .archive-card {
-            background: #fff;
-            padding: 2.5rem;
-            border-radius: 16px;
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-
-        .archive-icon {
-            font-size: 3rem;
-            color: #a68b7b;
-        }
-
-        .archive-card h2 {
-            border-bottom: none;
-        }
-
-        .archive-card a {
-            display: inline-block;
-            background: #2c2c2c;
-            color: #fff;
-            padding: 0.8rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 500;
-            margin: 0.8rem 0;
-            transition: background 0.2s;
-        }
-
-        .archive-card a:hover {
-            background: #1a1a1a;
-        }
-
-        /* FOOTER */
-        .footer {
-            background: #1a1a1a;
-            color: #ccc;
-            padding: 3rem 0;
-            text-align: center;
-        }
-
-        .footer h3 {
-            color: #fff;
-            font-weight: 400;
-            font-size: 1.5rem;
-        }
-
-        .footer .license {
-            margin-top: 1.5rem;
-            font-size: 0.9rem;
-            opacity: 0.7;
-            border-top: 1px solid #333;
-            padding-top: 1.5rem;
-        }
-
-        /* RESPONSIVO */
-        @media (max-width: 768px) {
-            .hero-title { font-size: 3.8rem; }
-            .hero-subtitle { font-size: 1rem; }
-            .hero-author { font-size: 1.4rem; }
-            h2 { font-size: 2rem; }
-            .tracks-grid { grid-template-columns: 1fr; }
-            .project-features { flex-direction: column; align-items: center; }
-        }
-
-        @media (max-width: 480px) {
-            .hero-title { font-size: 2.8rem; }
-            .hero { background-attachment: scroll; }
-            .hero-quote { font-size: 0.95rem; }
-        }
-    </style>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- HERO -->
-    <header class="hero">
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="hero-overlay">
             <div class="hero-content">
-                <p class="hero-subtitle">Quando a Poesia Clássica<br>Atravessa Fronteiras Linguísticas</p>
-                <h1 class="hero-title">Aos Pés<br><span class="highlight">Femininos</span></h1>
-                <p class="hero-author">Erigutemberg Meneses</p>
-                <p class="hero-detail">sonetos musicados · 2026</p>
+                <p class="hero-subtitle">Livro-Álbum · 2026</p>
+                <h1 class="hero-title">Aos Pés <span class="highlight">Femininos</span></h1>
+                <p class="hero-author">ERIGUTEMBERG MENESES</p>
+                <p class="hero-detail">POESIA · MÚSICA · IA</p>
                 <div class="hero-quote">
                     <i class="fas fa-quote-left"></i>
-                    <p>"A melodia sob seus pés — escaneie para ouvir o eco dos passos que inspiraram esta coleção."</p>
+                    Um soneto, doze línguas, uma alma universal.
                 </div>
             </div>
         </div>
-    </header>
-
-    <!-- PROJETO -->
-    <section class="project-section container">
-        <h2>O projeto</h2>
-        <p><strong>Aos Pés Femininos</strong> é um livro-álbum que reúne 12 versões musicadas de um mesmo soneto, cantado em 12 idiomas com o auxílio de inteligência artificial. Cada faixa respeita a prosódia, a métrica e a alma de cada língua — do português ao japonês, do russo ao grego. O projeto está disponível gratuitamente no Internet Archive, sob licença Creative Commons.</p>
-        <div class="project-features">
-            <span><i class="fas fa-book"></i> Livro digital com análises, prompts e glossário</span>
-            <span><i class="fas fa-globe"></i> 12 idiomas · românico, germânico, eslavo, helênico e japonês</span>
-            <span><i class="fas fa-robot"></i> IA generativa como intérprete paramétrica</span>
-        </div>
     </section>
 
-    <!-- TRACKS -->
-    <section class="tracks-section container">
-        <h2>Todas as faixas</h2>
-        <p class="tracks-intro">Clique no título da faixa para ouvir no Internet Archive ou use o player abaixo.</p>
-
-        <div class="tracks-grid" id="tracksGrid">
-            <!-- As faixas serão inseridas via JavaScript -->
-        </div>
-    </section>
-
-    <!-- ARCHIVE -->
-    <section class="archive-section container">
-        <div class="archive-card">
-            <i class="fas fa-archive archive-icon"></i>
-            <h2>Internet Archive</h2>
-            <a href="https://archive.org/details/aos-pes-femininos" target="_blank" rel="noopener noreferrer">
-                <i class="fas fa-external-link-alt"></i> Acessar coleção
-            </a>
-            <p>Todas as faixas, o livro digital e os materiais complementares estão disponíveis gratuitamente.</p>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
+    <!-- Project Section -->
+    <section class="project-section">
         <div class="container">
-            <h3>Erigutemberg Meneses</h3>
-            <p>Poeta, tradutor e entusiasta da interseção entre literatura e tecnologia.<br>Recife, 2026</p>
-            <p class="license">
-                <i class="fab fa-creative-commons"></i>
-                <i class="fab fa-creative-commons-by"></i>
-                <i class="fab fa-creative-commons-nc"></i>
-                <i class="fab fa-creative-commons-nd"></i>
-                Este projeto está licenciado sob Creative Commons — uso não comercial, sem obras derivadas.
+            <h2>O Projeto</h2>
+            <p>
+                <strong>Aos Pés Femininos</strong> é um livro-álbum que reúne <strong>12 versões musicadas</strong> de um mesmo soneto,
+                cantado em 12 idiomas com o auxílio de inteligência artificial. Cada faixa respeita a prosódia, a métrica e a alma
+                de cada língua — do português ao japonês, do russo ao grego. O projeto está disponível gratuitamente no
+                Internet Archive, sob licença Creative Commons.
             </p>
+            
+            <div class="project-features">
+                <span><i class="fas fa-book"></i> Livro digital com análises, prompts e glossário</span>
+                <span><i class="fas fa-globe"></i> 12 idiomas · românico, germânico, eslavo, helênico e japonês</span>
+                <span><i class="fas fa-robot"></i> IA generativa como intérprete paramétrica</span>
+            </div>
         </div>
-    </footer>
+    </section>
 
-    <script>
-        // ===== DADOS DAS FAIXAS =====
-        const tracks = [
-            { id: 1, title: 'Amor Eterno', lang: 'Português', duration: '3:35', desc: 'Balada romântica com violão dedilhado e violoncelo. Modulação de Dó maior para Lá menor.', file: '01%20Amor%20Eterno.mp3' },
-            { id: 2, title: 'Dove il tempo è pace', lang: 'Italiano', duration: '3:03', desc: 'Recitativo barroco com cravo e flauta doce. Silêncio de 2 segundos na palavra "pace".', file: '02%20Dove%20il%20tempo%20e%20pace.mp3' },
-            { id: 3, title: 'Gracia Divina', lang: 'Espanhol', duration: '2:10', desc: 'Villancico espiritual com violão flamenco. Sinalefa obrigatória e final abrupto.', file: '03%20Gracia%20Divina.mp3' },
-            { id: 4, title: 'Kimi no Kuroki Kagayaki', lang: 'Japonês', duration: '2:30', desc: 'Honkyoku com shakuhachi, koto e shō. Escala pentatônica yō e silêncios ativos (ma).', file: '04%20Kimi%20no%20Kuroki%20Kagayaki.mp3' },
-            { id: 5, title: 'Miresmei Femeii', lang: 'Romeno', duration: '3:27', desc: 'Balada balcânica com tambal, violino e nai. Cantada duas vezes: silábica e melismática.', file: '05%20Miresmei%20Femeii.mp3' },
-            { id: 6, title: 'Pieds Féminins', lang: 'Francês', duration: '2:36', desc: 'Mélodie simbolista com harpa e contrafagote. Enchaînement e última palavra sussurrada.', file: '06%20Pieds%20Feminins.mp3' },
-            { id: 7, title: 'Salmodia do Leito', lang: 'Português', duration: '4:04', desc: 'Canto salmódico com órgão de tubos e viola da gamba. Nota pedal sustentada por 60 segundos.', file: '07%20Salmodia%20do%20Leito.mp3' },
-            { id: 8, title: 'Sensuell', lang: 'Sueco', duration: '4:03', desc: 'Ambient experimental com piano preparado e harmônio. Modo lócrío e sílabas de 2 segundos.', file: '08%20Sensuell.mp3' },
-            { id: 9, title: 'Sopro de Fogo', lang: 'Português', duration: '2:47', desc: 'Fado dramático com guitarra portuguesa. Modo frígio, martellato e grito em falsete.', file: '09%20Sopro%20de%20Fogo.mp3' },
-            { id: 10, title: 'Turning Wheel of Love', lang: 'Inglês', duration: '3:32', desc: 'Cânone elizabetano com cravo, flauta doce e viola. Dístico final em homofonia.', file: '10%20Turning%20Wheel%20of%20Love.mp3' },
-            { id: 11, title: 'Το Ψιθύρισμα της Αγάπης', lang: 'Grego', duration: '2:08', desc: 'Rebetiko lento com bouzouki e violino. Hiatos tratados como notas separadas.', file: '11%20Το%20Ψιθύρισμα%20της%20Αγάπης.mp3' },
-            { id: 12, title: 'ПРЕДАННОСТЬ (Predannost)', lang: 'Russo', duration: '2:16', desc: 'Romance russo com piano solo. Redução vocálica (akanye) e consoantes palatalizadas.', file: '12%20ПРЕДАННОСТЬ%20Predannost.mp3' }
-        ];
-
-        const BASE_URL = 'https://archive.org/download/aos-pes-femininos/';
-
-        // ===== RENDERIZAR FAIXAS =====
-        function renderTracks() {
-            const grid = document.getElementById('tracksGrid');
-            grid.innerHTML = '';
-
-            tracks.forEach(track => {
-                const card = document.createElement('div');
-                card.className = 'track-card';
-                card.dataset.track = track.id;
-
-                const archiveLink = `${BASE_URL}${track.file}`;
-
-                card.innerHTML = `
-                    <span class="track-number">faixa ${track.id}</span>
-                    <h3 class="track-title" data-archive-link="${archiveLink}">${track.title}</h3>
-                    <p class="track-detail">${track.lang} · ${track.duration}</p>
-                    <p class="track-description">${track.desc}</p>
+    <!-- Tracks Section -->
+    <section class="tracks-section">
+        <div class="container">
+            <h2>Todas as Faixas</h2>
+            <p class="tracks-intro">Clique no título da faixa para ouvir no Internet Archive (player integrado) ou use o player direto.</p>
+            
+            <div class="tracks-grid">
+                <!-- Faixa 1 -->
+                <div class="track-card">
+                    <p class="track-number">Faixa 1</p>
+                    <h3 class="track-title" data-archive-link="https://archive.org/details/aos-pes-femininos">Amor Eterno</h3>
+                    <p class="track-detail">Português · 3:35</p>
+                    <p class="track-description">Balada romântica com violão dedilhado e violoncelo. Modulação de Dó maior para Lá menor.</p>
                     <div class="track-player">
                         <audio controls preload="none">
-                            <source src="${archiveLink}" type="audio/mpeg">
-                            Seu navegador não suporta áudio.
+                            <source src="https://archive.org/download/aos-pes-femininos/01-amor-eterno.mp3" type="audio/mpeg">
+                            Seu navegador não suporta o elemento de áudio.
+                        </audio>
+                        <p class="player-label">player direto (MP3)</p>
+                    </div>
+                </div>
+
+                <!-- Faixa 2 -->
+                <div class="track-card">
+                    <p class="track-number">Faixa 2</p>
+                    <h3 class="track-title" data-archive-link="https://archive.org/details/aos-pes-femininos">Dove il tempo è pace</h3>
+                    <p class="track-detail">Italiano · 3:03</p>
+                    <p class="track-description">Recitativo barroco com cravo e flauta doce. Silêncio de 2 segundos na palavra "pace".</p>
+                    <div class="track-player">
+                        <audio controls preload="none">
+                            <source src="https://archive.org/download/aos-pes-femininos/02-dove-il-tempo-e-pace.mp3" type="audio/mpeg">
+                            Seu navegador não suporta o elemento de áudio.
                         </audio>
                         <p class="player-label">player direto</p>
                     </div>
-                `;
+                </div>
 
-                grid.appendChild(card);
-            });
-        }
+                <!-- Faixa 3 -->
+                <div class="track-card">
+                    <p class="track-number">Faixa 3</p>
+                    <h3 class="track-title" data-archive-link="https://archive.org/details/aos-pes-femininos">Gracia Divina</h3>
+                    <p class="track-detail">Espanhol · 2:10</p>
+                    <p class="track-description">Villancico espiritual com violão flamenco. Sinalefa obrigatória e final abrupto.</p>
+                    <div class="track-player">
+                        <audio controls preload="none">
+                            <source src="https://archive.org/download/aos-pes-femininos/03-gracia-divina.mp3" type="audio/mpeg">
+                            Seu navegador não suporta o elemento de áudio.
+                        </audio>
+                        <p class="player-label">player direto</p>
+                    </div>
+                </div>
 
-        // ===== INICIALIZAR =====
-        document.addEventListener('DOMContentLoaded', () => {
-            renderTracks();
+                <!-- Faixa 4 -->
+                <div class="track-card">
+                    <p class="track-number">Faixa 4</p>
+                    <h3 class="track-title" data-archive-link="https://archive.org/details/aos-pes-femininos">Kimi no Kuroki Kagayaki</h3>
+                    <p class="track-detail">Japonês · 2:30</p>
+                    <p class="track-description">Honkyoku com shakuhachi, koto e shō. Escala pentatônica yō e silêncios ativos (ma).</p>
+                    <div class="track-player">
+                        <audio controls preload="none">
+                            <source src="https://archive.org/download/aos-pes-femininos/04-kimi-no-kuroki-kagayaki.mp3" type="audio/mpeg">
+                            Seu navegador não suporta o elemento de áudio.
+                        </audio>
+                        <p class="player-label">player direto</p>
+                    </div>
+                </div>
 
-            // 1. Pausar outros players quando um começa
-            const players = document.querySelectorAll('.track-player audio');
-            players.forEach(player => {
-                player.addEventListener('play', function() {
-                    players.forEach(other => {
-                        if (other !== this && !other.paused) {
-                            other.pause();
-                        }
-                    });
-                });
+                <!-- Faixa 5 -->
+                <div class="track-card">
+                    <p class="track-number">Faixa 5</p>
+                    <h3 class="track-title" data-archive-link="https://archive.org/details/aos-pes-femininos">Miresmei Femeii</h3>
+                    <p class="track-detail">Romeno · 3:27</p>
+                    <p class="track-description">Balada balcânica com tambal, violino e nai. Cantada duas vezes: silábica e melismática.</p>
+                    <div class="track-player">
+                        <audio controls preload="none">
+                            <source src="https://archive.org/download/aos-pes-femininos/05-miresmei-femeii.mp3" type="audio/mpeg">
+                            Seu navegador não suporta o elemento de áudio.
+                        </audio>
+                        <p class="player-label">player direto</p>
+                    </div>
+                </div>
 
-                // Tratar erro de carregamento
-                player.addEventListener('error', function() {
-                    const label = this.closest('.track-player').querySelector('.player-label');
-                    if (label) {
-                        label.textContent = '⚠️ Áudio temporariamente indisponível';
-                        label.style.color = '#d32f2f';
-                    }
-                });
-            });
+                <!-- Faixa 6 -->
+                <div class="track-card">
+                    <p class="track-number">Faixa 6</p>
+                    <h3 class="track-title" data-archive-link="https://archive.org/details/aos-pes-femininos">Pieds Féminins</h3>
+                    <p class="track-detail">Francês · 2:36</p>
+                    <p class="track-description">Mélodie simbolista com harpa e contrafagote. Enchaînement e última palavra sussurrada.</p>
+                    <div class="track-player">
+                        <audio controls preload="none">
+                            <source src="https://archive.org/download/aos-pes-femininos/06-pieds-feminins.mp3" type="audio/mpeg">
+                            Seu navegador não suporta o elemento de áudio.
+                        </audio>
+                        <p class="player-label">player direto</p>
+                    </div>
+                </div>
 
-            // 2. Clique no título abre o Internet Archive
-            document.querySelectorAll('.track-title').forEach(title => {
-                title.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    const link = this.dataset.archiveLink;
-                    if (link) {
-                        window.open(link, '_blank');
-                    }
-                });
-                title.style.cursor = 'pointer';
-            });
+                <!-- Faixa 7 -->
+                <div class="track-card">
+                    <p class="track-number">Faixa 7</p>
+                    <h3 class="track-title" data-archive-link="https://archive.org/details/aos-pes-femininos">Salmodia do Leito</h3>
+                    <p class="track-detail">Português · 4:04</p>
+                    <p class="track-description">Canto salmódico com órgão de tubos e viola da gamba. Nota pedal sustentada por 60 segundos.</p>
+                    <div class="track-player">
+                        <audio controls preload="none">
+                            <source src="https://archive.org/download/aos-pes-femininos/07-salmodia-do-leito.mp3" type="audio/mpeg">
+                            Seu navegador não suporta o elemento de áudio.
+                        </audio>
+                        <p class="player-label">player direto</p>
+                    </div>
+                </div>
 
-            // 3. Verificar imagem de fundo
-            const hero = document.querySelector('.hero');
-            const img = new Image();
-            img.onerror = function() {
-                console.warn('Imagem de fundo não encontrada. Verifique o arquivo capa-aos-pes-femininos.jpg');
-                hero.style.backgroundColor = '#2c1810';
-            };
-            img.src = 'capa-aos-pes-femininos.jpg';
+                <!-- Faixa 8 -->
+                <div class="track-card">
+                    <p class="track-number">Faixa 8</p>
+                    <h3 class="track-title" data-archive-link="https://archive.org/details/aos-pes-femininos">Sensuell</h3>
+                    <p class="track-detail">Sueco · 4:03</p>
+                    <p class="track-description">Ambient experimental com piano preparado e harmônio. Modo lócrrio e sílabas de 2 segundos.</p>
+                    <div class="track-player">
+                        <audio controls preload="none">
+                            <source src="https://archive.org/download/aos-pes-femininos/08-sensuell.mp3" type="audio/mpeg">
+                            Seu navegador não suporta o elemento de áudio.
+                        </audio>
+                        <p class="player-label">player direto</p>
+                    </div>
+                </div>
 
-            console.log('✅ Aos Pés Femininos carregado!');
-            console.log('🎵 Clique no título de cada faixa para abrir no Internet Archive.');
-        });
-    </script>
+                <!-- Faixa 9 -->
+                <div class="track-card">
+                    <p class="track-number">Faixa 9</p>
+                    <h3 class="track-title" data-archive-link="https://archive.org/details/aos-pes-femininos">Sopro de Fogo</h3>
+                    <p class="track-detail">Português · 2:47</p>
+                    <p class="track-description">Fado dramático com guitarra portuguesa. Modo frígio, martellato e grito em falsete.</p>
+                    <div class="track-player">
+                        <audio controls preload="none">
+                            <source src="https://archive.org/download/aos-pes-femininos/09-sopro-de-fogo.mp3" type="audio/mpeg">
+                            Seu navegador não suporta o elemento de áudio.
+                        </audio>
+                        <p class="player-label">player direto</p>
+                    </div>
+                </div>
+
+                <!-- Faixa 10 -->
+                <div class="track-card">
+                    <p class="track-number">Faixa 10</p>
+                    <h3 class="track-title" data-archive-link="https://archive.org/details/aos-pes-femininos">Turning Wheel of Love</h3>
+                    <p class="track-detail">Inglês · 3:32</p>
+                    <p class="track-description">Cânone elizabetano com cravo, flauta doce e viola. Dístico final em homofonia.</p>
+                    <div class="track-player">
+                        <audio controls preload="none">
+                            <source src="https://archive.org/download/aos-pes-femininos/10-turning-wheel-of-love.mp3" type="audio/mpeg">
+                            Seu navegador não suporta o elemento de áudio.
+                        </audio>
+                        <p class="player-label">player direto</p>
+                    </div>
+                </div>
+
+                <!-- Faixa 11 -->
+                <div class="track-card">
+                    <p class="track-number">Faixa 11</p>
+                    <h3 class="track-title" data-archive-link="https://archive.org/details/aos-pes-femininos">Το Ψιθύρισμα της Αγάπης</h3>
+                    <p class="track-detail">Grego · 2:08</p>
+                    <p class="track-description">Rebetiko lento com bouzouki e violino. Hiatos tratados como notas separadas.</p>
+                    <div class="track-player">
+                        <audio controls preload="none">
+                            <source src="https://archive.org/download/aos-pes-femininos/11-to-psithyrisma-tis-agapis.mp3" type="audio/mpeg">
+                            Seu navegador não suporta o elemento de áudio.
+                        </audio>
+                        <p class="player-label">player direto</p>
+                    </div>
+                </div>
+
+                <!-- Faixa 12 -->
+                <div class="track-card">
+                    <p class="track-number">Faixa 12</p>
+                    <h3 class="track-title" data-archive-link="https://archive.org/details/aos-pes-femininos">ПРЕДАННОСТЬ (Predannost)</h3>
+                    <p class="track-detail">Russo · 2:16</p>
+                    <p class="track-description">Romance russo com piano solo. Redução vocálica (akanye) e consoantes palatalizadas.</p>
+                    <div class="track-player">
+                        <audio controls preload="none">
+                            <source src="https://archive.org/download/aos-pes-femininos/12-predannost.mp3" type="audio/mpeg">
+                            Seu navegador não suporta o elemento de áudio.
+                        </audio>
+                        <p class="player-label">player direto</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Archive Section -->
+    <section class="archive-section">
+        <div class="container">
+            <div class="archive-card">
+                <div class="archive-icon">
+                    <i class="fas fa-archive"></i>
+                </div>
+                <h2>Internet Archive</h2>
+                <p>Todas as faixas, o livro digital e os materiais complementares estão disponíveis gratuitamente.</p>
+                <a href="https://archive.org/details/aos-pes-femininos" target="_blank" rel="noopener">
+                    <i class="fas fa-external-link-alt"></i> Acessar Coleção
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <h3>Aos Pés Femininos</h3>
+            <p>Um projeto de Erigutemberg Meneses</p>
+            <p>Poesia · Música · Inteligência Artificial</p>
+            <div class="license">
+                <p><i class="fab fa-creative-commons"></i><i class="fab fa-creative-commons-by"></i><i class="fab fa-creative-commons-nc"></i><i class="fab fa-creative-commons-nd"></i></p>
+                <p>CC BY-NC-ND 4.0 · Este projeto está licenciado sob Creative Commons — uso não comercial, sem obras derivadas.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
