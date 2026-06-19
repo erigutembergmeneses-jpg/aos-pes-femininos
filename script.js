@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // 1. Pausa automática ao iniciar outro player
     const audioPlayers = document.querySelectorAll('.track-player audio');
 
     audioPlayers.forEach(player => {
@@ -10,7 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        player.addEventListener('error', function(e) {
+        // Tratamento de erro
+        player.addEventListener('error', function() {
             console.warn('Erro ao carregar o áudio:', this.src);
             const parentCard = this.closest('.track-card');
             if (parentCard) {
@@ -23,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // 2. Clique no título abre o Internet Archive
     const trackTitles = document.querySelectorAll('.track-title');
 
     trackTitles.forEach(title => {
@@ -37,39 +40,22 @@ document.addEventListener('DOMContentLoaded', () => {
         title.style.cursor = 'pointer';
     });
 
-    const anchorLinks = document.querySelectorAll('a[href^="#"]');
-    anchorLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            if (href && href !== "#") {
-                e.preventDefault();
-                const targetElement = document.querySelector(href);
-                if (targetElement) {
-                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            }
-        });
-    });
-
+    // 3. Verificação da imagem de fundo
     const hero = document.querySelector('.hero');
     if (hero) {
         const img = new Image();
         img.onload = function() {
-            console.log('✅ Imagem de fundo carregada com sucesso!');
+            console.log('✅ Imagem de capa carregada com sucesso!');
         };
         img.onerror = function() {
-            console.warn('⚠️ Imagem de fundo não encontrada. Verifique se o arquivo capa-aos-pes-femininos.jpg existe no repositório.');
+            console.warn('⚠️ Imagem de capa não carregou. Usando gradiente de fallback.');
             hero.style.backgroundColor = '#2c1810';
         };
-        
-        const bgImage = window.getComputedStyle(hero).backgroundImage;
-        if (bgImage && bgImage !== 'none') {
-            const url = bgImage.replace(/^url\(["']?/, '').replace(/["']?\)$/, '');
-            img.src = url;
-        }
+        img.src = 'https://archive.org/services/img/pieds-feminins';
     }
 
+    // 4. Mensagens no console
     console.log('✨ Aos Pés Femininos — Poesia, Música e IA.');
-    console.log('📖 Explore as 12 faixas e o livro digital no Internet Archive.');
+    console.log('📖 Coleção completa: https://archive.org/details/pieds-feminins');
     console.log('🎵 Clique no título de cada faixa para abrir no Internet Archive.');
 });
