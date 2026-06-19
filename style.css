@@ -1,397 +1,373 @@
-/* =========================================
-   RESET E CONFIGURAÇÕES GLOBAIS
-   ========================================= */
+/* Reset e Configurações Globais */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background: #fcf8f2;
-    color: #1e1e1e;
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
-    padding: 0 1rem;
+  font-family: 'Cormorant Garamond', serif;
+  background-color: #f8f5f0;
+  color: #2c2c2c;
+  line-height: 1.6;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-/* =========================================
-   TIPOGRAFIA E TÍTULOS
-   ========================================= */
-h1, h2, h3, .serif {
-    font-family: 'Playfair Display', serif;
-    font-weight: 600;
+/* Tipografia */
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #1a1a1a;
 }
 
-h1 {
-    font-size: 3.2rem;
-    letter-spacing: -0.01em;
-    line-height: 1.1;
-    color: #1a1410;
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.5px;
+  border-bottom: 2px solid #d4c5b2;
+  display: inline-block;
+  padding-bottom: 0.3rem;
 }
 
-h1 small {
-    display: block;
-    font-size: 1.1rem;
-    font-family: 'Inter', sans-serif;
-    font-weight: 300;
-    letter-spacing: 0.04em;
-    color: #5a4a3a;
-    margin-top: 0.3rem;
-}
-
-.section-title {
-    font-size: 2.4rem;
-    margin: 3rem 0 1.8rem 0;
-    position: relative;
-}
-
-.section-title:after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 3px;
-    background: #b99b82;
-    margin-top: 0.4rem;
-}
-
-/* =========================================
-   HERO SECTION (CAPA)
-   ========================================= */
+/* Cabeçalho Hero */
 .hero {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin: 2rem 0 4rem 0;
-    gap: 2rem;
+  height: 100vh;
+  min-height: 600px;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
 }
 
-.hero-text {
-    flex: 1 1 400px;
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.hero-cover {
-    flex: 0 0 240px;
-    background: #d9cdc0;
-    border-radius: 20px;
-    padding: 1.8rem 1.2rem;
-    text-align: center;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.06);
-    border: 1px solid #e5d8cc;
+.hero-content {
+  max-width: 800px;
+  padding: 20px;
+  animation: fadeIn 1.5s ease-out;
 }
 
-.hero-cover i {
-    font-size: 4.5rem;
-    color: #4d3b2e;
-    opacity: 0.7;
+.hero-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  opacity: 0.9;
 }
 
-.hero-cover .cover-label {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: #2a1f18;
-    margin: 0.8rem 0 0.2rem;
+.hero-title {
+  font-size: 5.5rem;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
 }
 
-.hero-cover .cover-sub {
-    font-size: 0.8rem;
-    letter-spacing: 0.1em;
-    color: #5a4a3a;
-    border-top: 1px solid #beaa99;
-    padding-top: 0.6rem;
+.hero-title .highlight {
+  color: #e8c9a0;
+  font-style: italic;
+  display: inline-block;
 }
 
-.subhead {
-    font-size: 1.2rem;
-    font-weight: 300;
-    color: #3d322b;
-    border-left: 4px solid #b99b82;
-    padding-left: 1.2rem;
-    margin: 1.5rem 0 2.5rem 0;
-    max-width: 700px;
+.hero-author {
+  font-size: 1.8rem;
+  font-weight: 300;
+  letter-spacing: 4px;
+  margin-top: 0.5rem;
+  font-family: 'Cormorant Garamond', serif;
 }
 
-.meta-tag {
-    background: #e9dfd6;
-    border-radius: 40px;
-    padding: 0.2rem 1.2rem;
-    display: inline-block;
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    color: #3d2c20;
-    margin-top: 1rem;
+.hero-detail {
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: 6px;
+  opacity: 0.8;
+  margin-top: 0.2rem;
 }
 
-/* =========================================
-   BOTÕES
-   ========================================= */
-.btn {
-    display: inline-block;
-    background: #1e1e1e;
-    color: #fcf8f2;
-    padding: 0.7rem 2rem;
-    border-radius: 40px;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 0.95rem;
-    border: 1px solid #1e1e1e;
-    transition: 0.2s;
+.hero-quote {
+  margin-top: 2.5rem;
+  padding: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  font-style: italic;
+  font-size: 1.1rem;
+  opacity: 0.9;
 }
 
-.btn i {
-    margin-right: 0.5rem;
+.hero-quote i {
+  margin-right: 10px;
+  opacity: 0.6;
 }
 
-.btn-outline {
-    background: transparent;
-    color: #1e1e1e;
-    border-color: #b99b82;
+/* Animações */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.btn-outline i {
-    margin-right: 0.5rem;
+/* Seção Projeto */
+.project-section {
+  padding: 5rem 0 3rem 0;
+  background: #fff;
 }
 
-.btn-outline:hover {
-    background: #b99b82;
-    color: #fcf8f2;
-    border-color: #b99b82;
+.project-section p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin-bottom: 2rem;
+  color: #3d3d3d;
 }
 
-/* =========================================
-   GRID DE FAIXAS (ÁLBUM)
-   ========================================= */
-.faixa-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 2rem;
-    margin: 2rem 0;
+.project-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1rem;
 }
 
-.faixa-card {
-    background: #ffffff;
-    border-radius: 20px;
-    padding: 1.6rem 1.6rem 1.8rem;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.03);
-    border: 1px solid #eee7e0;
-    transition: 0.2s;
-    display: flex;
-    flex-direction: column;
+.project-features span {
+  background: #f0ebe5;
+  padding: 0.7rem 1.5rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.faixa-card:hover {
-    box-shadow: 0 12px 28px rgba(0,0,0,0.06);
-    border-color: #d4c3b4;
+.project-features i {
+  color: #a68b7b;
+  font-size: 1.1rem;
 }
 
-.faixa-num {
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: #b99b82;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    margin-bottom: 0.3rem;
+/* Seção de Faixas */
+.tracks-section {
+  padding: 4rem 0;
+  background: #faf8f5;
 }
 
-.faixa-card h3 {
-    font-size: 1.4rem;
-    font-weight: 600;
-    margin-bottom: 0.2rem;
+.tracks-intro {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2.5rem;
 }
 
-.faixa-lang {
-    font-size: 0.9rem;
-    color: #5a4a3a;
-    font-weight: 400;
+.tracks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 2rem;
 }
 
-.faixa-dur {
-    font-size: 0.8rem;
-    background: #f1ebe5;
-    padding: 0.2rem 0.8rem;
-    border-radius: 30px;
-    display: inline-block;
-    margin: 0.4rem 0 0.8rem;
-    color: #3d322b;
+.track-card {
+  background: #fff;
+  padding: 1.8rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-left: 4px solid #d4c5b2;
 }
 
-.faixa-desc {
-    font-size: 0.95rem;
-    color: #2e261f;
-    margin: 0.4rem 0 1rem;
-    flex: 1;
+.track-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }
 
-.faixa-actions {
-    display: flex;
-    gap: 0.8rem;
-    flex-wrap: wrap;
-    margin-top: 0.8rem;
+.track-number {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #a68b7b;
+  font-weight: 600;
 }
 
-.faixa-actions a {
-    background: #f1ebe5;
-    padding: 0.4rem 1.2rem;
-    border-radius: 40px;
-    text-decoration: none;
-    font-size: 0.85rem;
-    font-weight: 500;
-    color: #1e1e1e;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    transition: 0.15s;
+.track-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 0.3rem 0 0.2rem 0;
+  cursor: pointer;
+  transition: color 0.2s;
 }
 
-.faixa-actions a i {
-    font-size: 0.9rem;
+.track-title:hover {
+  color: #a68b7b;
 }
 
-.faixa-actions a:hover {
-    background: #b99b82;
-    color: #fff;
+.track-detail {
+  font-weight: 500;
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
 }
 
-.archive-badge {
-    background: #1e1e1e;
-    color: #fcf8f2;
-    padding: 0.3rem 1.2rem;
-    border-radius: 40px;
-    display: inline-block;
-    font-size: 0.8rem;
-    margin: 0.4rem 0 0.8rem;
+.track-description {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 1rem;
+  line-height: 1.5;
 }
 
-/* =========================================
-   BLOCOS DE CITAÇÃO E DESTAQUE
-   ========================================= */
-.quote-block {
-    background: #f1ebe5;
-    padding: 2rem 2.5rem;
-    border-radius: 30px;
-    margin: 3rem 0;
-    font-style: italic;
-    font-size: 1.2rem;
-    border-left: 6px solid #b99b82;
+.track-player {
+  margin-top: 0.8rem;
 }
 
-.quote-block cite {
-    display: block;
-    margin-top: 0.8rem;
-    font-style: normal;
-    font-weight: 400;
-    color: #4d3b2e;
+.track-player audio {
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
 }
 
-/* =========================================
-   PLAYER DE ÁUDIO MINIMALISTA
-   ========================================= */
-.player-wrapper {
-    background: #fff;
-    border-radius: 50px;
-    padding: 0.3rem 0.3rem 0.3rem 1rem;
-    display: inline-flex;
-    align-items: center;
-    border: 1px solid #d4c3b4;
-    gap: 0.5rem;
-    margin-top: 0.2rem;
+.player-label {
+  font-size: 0.8rem;
+  text-align: right;
+  color: #888;
+  margin-top: 0.3rem;
+  font-style: italic;
 }
 
-.player-wrapper audio {
-    height: 34px;
-    width: 140px;
+/* Seção Internet Archive */
+.archive-section {
+  padding: 4rem 0;
+  background: #eae3db;
 }
 
-/* =========================================
-   FOOTER (RODAPÉ)
-   ========================================= */
+.archive-card {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 16px;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.archive-icon {
+  font-size: 3rem;
+  color: #a68b7b;
+  margin-bottom: 0.5rem;
+}
+
+.archive-card h2 {
+  border-bottom: none;
+  margin-bottom: 0.5rem;
+}
+
+.archive-card a {
+  display: inline-block;
+  background: #2c2c2c;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0.8rem 0 1rem 0;
+  transition: background 0.2s;
+}
+
+.archive-card a:hover {
+  background: #1a1a1a;
+}
+
+/* Rodapé */
 .footer {
-    border-top: 1px solid #e5d8cc;
-    margin-top: 4rem;
-    padding: 2rem 0 1.5rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    color: #4d3b2e;
-    font-size: 0.9rem;
+  background: #1a1a1a;
+  color: #ccc;
+  padding: 3rem 0;
+  text-align: center;
 }
 
-.footer a {
-    color: #1e1e1e;
-    text-decoration: none;
-    border-bottom: 1px dotted #b99b82;
+.footer h3 {
+  color: #fff;
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
-.footer a:hover {
-    border-bottom: 1px solid #1e1e1e;
+.footer p {
+  max-width: 600px;
+  margin: 0 auto 0.5rem auto;
 }
 
-.license {
-    font-size: 0.8rem;
-    opacity: 0.7;
-    margin-top: 0.4rem;
+.footer .license {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  opacity: 0.7;
+  border-top: 1px solid #333;
+  padding-top: 1.5rem;
 }
 
-/* =========================================
-   RESPONSIVIDADE (MEDIA QUERIES)
-   ========================================= */
-@media (max-width: 650px) {
-    h1 { 
-        font-size: 2.4rem; 
-    }
-    .hero-cover { 
-        flex: 0 0 100%; 
-    }
-    .section-title { 
-        font-size: 2rem; 
-    }
-    .faixa-grid { 
-        grid-template-columns: 1fr; 
-    }
+.footer i {
+  margin: 0 3px;
 }
 
-@media (max-width: 450px) {
-    .player-wrapper audio { 
-        width: 100px; 
-    }
-}
-body {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    background-image: url('capa-aos-pes-femininos.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    position: relative;
+/* Responsividade */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 3.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-author {
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .tracks-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-features {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .project-features span {
+    justify-content: center;
+  }
 }
 
-/* Overlay escuro para melhorar legibilidade */
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Ajuste a opacidade (0.3 a 0.7) */
-    z-index: -1;
-}
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.8rem;
+  }
 
-/* Garantir que o conteúdo fique legível */
-main, header, footer, section {
-    position: relative;
-    z-index: 1;
-    color: #fff; /* Texto branco para contrastar */
+  .hero {
+    background-attachment: scroll;
+  }
+
+  .hero-quote {
+    font-size: 0.95rem;
+    padding: 1rem;
+  }
+
+  .track-card {
+    padding: 1.2rem;
+  }
 }
