@@ -32,10 +32,11 @@ h2 {
     padding-bottom: 0.3rem;
 }
 
+/* Hero com imagem do Internet Archive */
 .hero {
     height: 100vh;
     min-height: 600px;
-    background-image: url('capa-aos-pes-femininos.jpg');
+    background-image: url('https://archive.org/services/img/pieds-feminins');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -47,6 +48,7 @@ h2 {
     color: #fff;
 }
 
+/* Fallback caso a imagem não carregue */
 .hero::before {
     content: '';
     position: absolute;
