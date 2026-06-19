@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // --- 1. Player de Áudio: Pausa automática ao iniciar outro ---
     const audioPlayers = document.querySelectorAll('.track-player audio');
 
     audioPlayers.forEach(player => {
@@ -11,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        // Tratamento de erro para players
         player.addEventListener('error', function(e) {
             console.warn('Erro ao carregar o áudio:', this.src);
             const parentCard = this.closest('.track-card');
@@ -25,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- 2. Clique no título da faixa para abrir no Internet Archive ---
     const trackTitles = document.querySelectorAll('.track-title');
 
     trackTitles.forEach(title => {
@@ -34,19 +31,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const archiveLink = this.dataset.archiveLink;
             if (archiveLink) {
                 window.open(archiveLink, '_blank');
-            } else {
-                console.warn('Link do Internet Archive não configurado para esta faixa.');
-                this.style.color = '#d32f2f';
-                setTimeout(() => {
-                    this.style.color = '';
-                }, 1000);
             }
         });
 
         title.style.cursor = 'pointer';
     });
 
-    // --- 3. Efeito de rolagem suave para links âncora ---
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
     anchorLinks.forEach(link => {
         link.addEventListener('click', function(e) {
@@ -61,7 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- 4. Verificação se a imagem de fundo carregou ---
     const hero = document.querySelector('.hero');
     if (hero) {
         const img = new Image();
@@ -69,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('✅ Imagem de fundo carregada com sucesso!');
         };
         img.onerror = function() {
-            console.warn('⚠️ Imagem de fundo não encontrada. Verifique o caminho do arquivo.');
+            console.warn('⚠️ Imagem de fundo não encontrada. Verifique se o arquivo capa-aos-pes-femininos.jpg existe no repositório.');
             hero.style.backgroundColor = '#2c1810';
         };
         
@@ -80,7 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // --- 5. Mensagem de boas-vindas ---
     console.log('✨ Aos Pés Femininos — Poesia, Música e IA.');
     console.log('📖 Explore as 12 faixas e o livro digital no Internet Archive.');
     console.log('🎵 Clique no título de cada faixa para abrir no Internet Archive.');
